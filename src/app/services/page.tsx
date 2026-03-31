@@ -52,23 +52,23 @@ export default function ServicesPage() {
 
         {/* Services Grid */}
         <section className="pb-[120px] px-[60px] max-lg:px-8 max-lg:pb-20">
-          <div className="grid grid-cols-3 gap-px bg-border border border-border max-w-[1280px] mx-auto max-lg:grid-cols-2 max-sm:grid-cols-1">
+          <div className="grid grid-cols-3 gap-5 max-w-[1280px] mx-auto max-lg:grid-cols-2 max-sm:grid-cols-1">
             {services.map((service, i) => (
               <ScrollReveal key={service.slug} delay={(i % 3) as 0 | 1 | 2}>
                 <Link
                   href={`/services/${service.slug}`}
-                  className="block bg-warm-white p-10 px-9 transition-all duration-300 relative overflow-hidden no-underline group hover:bg-cream before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-sage-dark before:transition-[width] before:duration-300 hover:before:w-full min-h-[220px]"
+                  className="group block bg-cream border border-border/60 p-9 pb-10 no-underline transition-all duration-300 hover:border-sage-light hover:shadow-[0_8px_30px_rgba(92,114,96,0.08)] hover:-translate-y-1 h-full"
                 >
-                  <span className="font-heading text-[13px] text-gold font-normal tracking-[0.08em] mb-4 block">
+                  <span className="font-heading text-[13px] text-gold font-normal tracking-[0.08em] mb-5 block">
                     {service.num}
                   </span>
-                  <div className="font-heading text-[22px] font-normal text-charcoal mb-3 leading-[1.3]">
+                  <div className="font-heading text-[22px] font-normal text-charcoal mb-3 leading-[1.3] group-hover:text-sage-dark transition-colors duration-300">
                     {service.name}
                   </div>
-                  <p className="text-[13.5px] text-text-muted leading-[1.75] mb-4">
+                  <p className="text-[13.5px] text-text-muted leading-[1.75] mb-5">
                     {service.shortDesc}
                   </p>
-                  <span className="text-[12px] text-sage-dark tracking-[0.08em] uppercase font-medium flex items-center gap-2 transition-all duration-300 group-hover:gap-3.5 after:content-['→'] after:text-[14px]">
+                  <span className="text-[11px] text-sage-dark tracking-[0.1em] uppercase font-medium flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:gap-3 after:content-['→'] after:text-[14px]">
                     Learn more
                   </span>
                 </Link>
