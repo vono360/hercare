@@ -8,27 +8,27 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        cream: "#FAF7F2",
-        "warm-white": "#FDFCF9",
+        cream: withOpacity("250 247 242"),
+        "warm-white": withOpacity("253 252 249"),
         sage: {
-          DEFAULT: "#8A9E8B",
-          light: "#C2CFBF",
-          dark: "#5C7260",
+          DEFAULT: withOpacity("138 158 139"),
+          light: withOpacity("194 207 191"),
+          dark: withOpacity("92 114 96"),
         },
         charcoal: {
-          DEFAULT: "#2A2A2A",
-          soft: "#3D3D3D",
+          DEFAULT: withOpacity("42 42 42"),
+          soft: withOpacity("61 61 61"),
         },
         taupe: {
-          DEFAULT: "#B8A898",
-          light: "#E8E0D8",
+          DEFAULT: withOpacity("184 168 152"),
+          light: withOpacity("232 224 216"),
         },
         gold: {
-          DEFAULT: "#C4A962",
-          light: "#E8D9B0",
+          DEFAULT: withOpacity("196 169 98"),
+          light: withOpacity("232 217 176"),
         },
-        "text-primary": "#2A2A2A",
-        "text-muted": "#655B51",
+        "text-primary": withOpacity("42 42 42"),
+        "text-muted": withOpacity("101 91 81"),
         border: "rgba(184, 168, 152, 0.3)",
       },
       fontFamily: {
@@ -45,3 +45,16 @@ module.exports = {
   },
   plugins: [],
 };
+
+/**
+ * Creates a color value that supports Tailwind's opacity modifier syntax.
+ * Usage: text-warm-white/80, bg-cream/96, etc.
+ */
+function withOpacity(rgbChannels) {
+  return ({ opacityValue }) => {
+    if (opacityValue !== undefined) {
+      return `rgba(${rgbChannels.replace(/ /g, ", ")}, ${opacityValue})`;
+    }
+    return `rgb(${rgbChannels.replace(/ /g, ", ")})`;
+  };
+}
