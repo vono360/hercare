@@ -14,7 +14,7 @@
   --color-gold: #C4A962;
   --color-gold-light: #E8D9B0;
   --color-text-primary: #2A2A2A;
-  --color-text-muted: #7A7065;
+  --color-text-muted: #655B51;
   --color-border: rgba(184, 168, 152, 0.3);
 
   /* Fonts */
@@ -148,6 +148,12 @@ body {
 /* Pulsing dot */
 .animate-pulse-dot {
   animation: pulse 2s ease-in-out infinite;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-sage-dark);
+  outline-offset: 2px;
 }
 
 /* Reduced motion */

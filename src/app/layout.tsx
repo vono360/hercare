@@ -76,6 +76,12 @@ export default function RootLayout({
               "A new kind of gynecology practice in Naperville, IL — where integrative care, genuine listening, and evidence-based medicine meet to support your whole health and lifelong vitality.",
           }}
         />
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[999] focus:bg-sage-dark focus:text-warm-white focus:py-3 focus:px-6 focus:text-[13px] focus:tracking-[0.1em] focus:uppercase focus:font-medium focus:no-underline"
+        >
+          Skip to main content
+        </a>
         {children}
       </body>
     </html>

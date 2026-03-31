@@ -15,7 +15,7 @@ export default function BlogPage() {
   return (
     <>
       <Navbar />
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section className="pt-[160px] pb-20 px-[60px] max-lg:px-8 max-lg:pt-[130px]">
           <div className="max-w-[900px] mx-auto">

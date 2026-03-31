@@ -66,7 +66,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     <>
       <JsonLd data={blogSchema} />
       <Navbar />
-      <main>
+      <main id="main-content">
         {/* Header */}
         <section className="pt-[160px] pb-12 px-[60px] max-lg:px-8 max-lg:pt-[130px]">
           <div className="max-w-[680px] mx-auto">
