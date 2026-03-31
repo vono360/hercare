@@ -1,4 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+
+function color(rgb) {
+  return `rgb(${rgb} / <alpha-value>)`;
+}
+
 module.exports = {
   content: [
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,27 +13,27 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        cream: withOpacity("250 247 242"),
-        "warm-white": withOpacity("253 252 249"),
+        cream: color("250 247 242"),
+        "warm-white": color("253 252 249"),
         sage: {
-          DEFAULT: withOpacity("138 158 139"),
-          light: withOpacity("194 207 191"),
-          dark: withOpacity("92 114 96"),
+          DEFAULT: color("138 158 139"),
+          light: color("194 207 191"),
+          dark: color("92 114 96"),
         },
         charcoal: {
-          DEFAULT: withOpacity("42 42 42"),
-          soft: withOpacity("61 61 61"),
+          DEFAULT: color("42 42 42"),
+          soft: color("61 61 61"),
         },
         taupe: {
-          DEFAULT: withOpacity("184 168 152"),
-          light: withOpacity("232 224 216"),
+          DEFAULT: color("184 168 152"),
+          light: color("232 224 216"),
         },
         gold: {
-          DEFAULT: withOpacity("196 169 98"),
-          light: withOpacity("232 217 176"),
+          DEFAULT: color("196 169 98"),
+          light: color("232 217 176"),
         },
-        "text-primary": withOpacity("42 42 42"),
-        "text-muted": withOpacity("101 91 81"),
+        "text-primary": color("42 42 42"),
+        "text-muted": color("101 91 81"),
         border: "rgba(184, 168, 152, 0.3)",
       },
       fontFamily: {
@@ -45,16 +50,3 @@ module.exports = {
   },
   plugins: [],
 };
-
-/**
- * Creates a color value that supports Tailwind's opacity modifier syntax.
- * Usage: text-warm-white/80, bg-cream/96, etc.
- */
-function withOpacity(rgbChannels) {
-  return ({ opacityValue }) => {
-    if (opacityValue !== undefined) {
-      return `rgba(${rgbChannels.replace(/ /g, ", ")}, ${opacityValue})`;
-    }
-    return `rgb(${rgbChannels.replace(/ /g, ", ")})`;
-  };
-}

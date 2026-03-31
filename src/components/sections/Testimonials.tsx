@@ -11,7 +11,7 @@ export default function Testimonials() {
         <span className="text-[11px] tracking-[0.22em] uppercase text-gold font-medium mb-6 block">
           Patient Stories
         </span>
-        <h2 className="font-heading text-[clamp(36px,3.5vw,54px)] font-light leading-[1.12] text-warm-white">
+        <h2 className="font-heading text-[clamp(36px,3.5vw,54px)] font-light leading-[1.12]" style={{ color: "#FDFCF9" }}>
           What our patients{" "}
           <em className="italic text-sage-light">say</em>
         </h2>
@@ -20,19 +20,34 @@ export default function Testimonials() {
       <div className="grid grid-cols-3 gap-6 max-w-[1280px] mx-auto max-lg:grid-cols-1 max-lg:max-w-[600px]">
         {testimonials.map((review, i) => (
           <ScrollReveal key={i} delay={(i * 2) as 0 | 2 | 4}>
-            <div className="bg-warm-white/4 border border-warm-white/8 p-10 px-9 transition-all duration-300 relative hover:bg-warm-white/7 hover:border-gold/30 hover:-translate-y-1">
+            <div
+              className="p-10 px-9 transition-all duration-300 relative hover:-translate-y-1"
+              style={{
+                backgroundColor: "rgba(253,252,249,0.04)",
+                border: "1px solid rgba(253,252,249,0.08)",
+              }}
+            >
               <div className="flex gap-1 mb-6 text-gold text-[14px]">
                 {Array.from({ length: review.rating }).map((_, j) => (
                   <span key={j}>&#9733;</span>
                 ))}
               </div>
-              <p className="font-heading text-[19px] italic font-light text-warm-white/88 leading-[1.65] mb-7">
+              <p
+                className="font-heading text-[19px] italic font-light leading-[1.65] mb-7"
+                style={{ color: "rgba(253,252,249,0.88)" }}
+              >
                 &ldquo;{review.text}&rdquo;
               </p>
-              <span className="text-[11px] tracking-[0.12em] uppercase text-warm-white/35">
+              <span
+                className="text-[11px] tracking-[0.12em] uppercase"
+                style={{ color: "rgba(253,252,249,0.35)" }}
+              >
                 {review.author}
               </span>
-              <span className="absolute top-6 right-7 font-heading text-[80px] leading-none text-gold/12 italic">
+              <span
+                className="absolute top-6 right-7 font-heading text-[80px] leading-none italic"
+                style={{ color: "rgba(196,169,98,0.12)" }}
+              >
                 &ldquo;
               </span>
             </div>
