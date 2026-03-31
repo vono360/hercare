@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Jost } from "next/font/google";
+import JsonLd from "@/components/seo/JsonLd";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -42,7 +43,41 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${jost.variable}`}>
-      <body>{children}</body>
+      <body>
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "MedicalClinic",
+            name: "HerCare Gynecology",
+            alternateName: "HerCare Gynecology by Dr. Terri Alexander",
+            medicalSpecialty: "Gynecology",
+            url: "https://hercaregynecology.com",
+            telephone: "(630) 000-0000",
+            email: "hello@hercaregynecology.com",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Naperville",
+              addressRegion: "IL",
+              addressCountry: "US",
+            },
+            openingHoursSpecification: {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+              ],
+              opens: "08:00",
+              closes: "17:00",
+            },
+            description:
+              "A new kind of gynecology practice in Naperville, IL — where integrative care, genuine listening, and evidence-based medicine meet to support your whole health and lifelong vitality.",
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
