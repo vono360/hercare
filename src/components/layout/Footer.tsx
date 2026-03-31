@@ -64,6 +64,14 @@ export default function Footer() {
             </li>
             <li>
               <Link
+                href="/blog"
+                className="no-underline text-[14px] text-warm-white/65 transition-colors duration-300 hover:text-sage-light"
+              >
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/contact"
                 className="no-underline text-[14px] text-warm-white/65 transition-colors duration-300 hover:text-sage-light"
               >

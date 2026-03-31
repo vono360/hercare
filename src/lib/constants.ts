@@ -15,4 +15,5 @@ export const NAV_LINKS = [
   { label: "Services", href: "/services" },
   { label: "Dr. Alexander", href: "/about" },
   { label: "Patient Stories", href: "/patient-stories" },
+  { label: "Blog", href: "/blog" },
 ] as const;
