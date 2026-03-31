@@ -129,7 +129,7 @@ export default function AppointmentForm() {
           </div>
           <button
             type="submit"
-            className="w-full py-[18px] bg-sage-dark text-warm-white border-none font-body text-[12px] tracking-[0.18em] uppercase font-medium cursor-pointer transition-all duration-350 mt-2 hover:bg-charcoal hover:-translate-y-px hover:shadow-[0_8px_32px_rgba(42,42,42,0.15)]"
+            className="w-full py-[18px] bg-sage-dark text-warm-white border-none font-body text-[12px] tracking-[0.18em] uppercase font-medium cursor-pointer transition-all duration-300 mt-2 hover:bg-charcoal hover:-translate-y-px hover:shadow-[0_8px_32px_rgba(42,42,42,0.15)]"
           >
             Send Appointment Request &rarr;
           </button>
@@ -142,7 +142,7 @@ export default function AppointmentForm() {
 
       {/* Toast */}
       <div
-        className={`fixed bottom-10 right-10 bg-sage-dark text-warm-white py-5 px-8 text-[14px] z-[999] pointer-events-none transition-all duration-400 ${
+        className={`fixed bottom-10 right-10 bg-sage-dark text-warm-white py-5 px-8 text-[14px] z-[999] pointer-events-none transition-all duration-300 ${
           showToast
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-5"

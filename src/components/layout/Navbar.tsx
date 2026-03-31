@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-100 flex items-center justify-between transition-all duration-400 ${
+        className={`fixed top-0 left-0 right-0 z-100 flex items-center justify-between transition-all duration-300 ${
           scrolled
             ? "bg-cream/96 backdrop-blur-[12px] py-4 px-[60px] shadow-[0_1px_0_var(--color-border)]"
             : "py-6 px-[60px]"

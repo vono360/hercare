@@ -202,7 +202,7 @@ export default function ContactPage() {
                     href={drchronoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block py-4 px-8 bg-charcoal text-warm-white no-underline text-[12px] tracking-[0.15em] uppercase font-medium transition-all duration-350 hover:bg-sage-dark hover:-translate-y-px"
+                    className="inline-block py-4 px-8 bg-charcoal text-warm-white no-underline text-[12px] tracking-[0.15em] uppercase font-medium transition-all duration-300 hover:bg-sage-dark hover:-translate-y-px"
                   >
                     Book via Patient Portal &rarr;
                   </a>

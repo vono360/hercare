@@ -57,7 +57,7 @@ export default function ServicesPage() {
               <ScrollReveal key={service.slug} delay={(i % 3) as 0 | 1 | 2}>
                 <Link
                   href={`/services/${service.slug}`}
-                  className="block bg-warm-white p-10 px-9 transition-all duration-300 relative overflow-hidden no-underline group hover:bg-cream before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-sage-dark before:transition-[width] before:duration-400 hover:before:w-full min-h-[220px]"
+                  className="block bg-warm-white p-10 px-9 transition-all duration-300 relative overflow-hidden no-underline group hover:bg-cream before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-sage-dark before:transition-[width] before:duration-300 hover:before:w-full min-h-[220px]"
                 >
                   <span className="font-heading text-[13px] text-gold font-normal tracking-[0.08em] mb-4 block">
                     {service.num}
@@ -90,7 +90,7 @@ export default function ServicesPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-block py-4 px-10 bg-warm-white text-sage-dark no-underline text-[12px] tracking-[0.15em] uppercase font-medium transition-all duration-350 hover:bg-gold hover:text-warm-white hover:-translate-y-px"
+              className="inline-block py-4 px-10 bg-warm-white text-sage-dark no-underline text-[12px] tracking-[0.15em] uppercase font-medium transition-all duration-300 hover:bg-gold hover:text-warm-white hover:-translate-y-px"
             >
               Request an Appointment
             </Link>

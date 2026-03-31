@@ -8,7 +8,7 @@ export default function Hero() {
       className="min-h-screen grid grid-cols-2 relative overflow-hidden max-lg:grid-cols-1"
     >
       {/* Left content */}
-      <div className="flex flex-col justify-center py-[160px] px-[60px] pb-20 relative z-2 max-lg:px-8 max-lg:pt-[140px]">
+      <div className="flex flex-col justify-center py-[160px] px-[60px] pb-20 relative z-[2] max-lg:px-8 max-lg:pt-[140px]">
         <p className="text-[11px] tracking-[0.22em] uppercase text-gold font-medium mb-8 animate-fade-up animate-delay-1">
           Board-Certified OB/GYN &middot; Opening Spring 2026
         </p>
@@ -27,7 +27,7 @@ export default function Hero() {
         <div className="flex gap-5 items-center animate-fade-up animate-delay-4">
           <Link
             href="/contact"
-            className="inline-block py-4 px-10 bg-sage-dark text-warm-white no-underline text-[12px] tracking-[0.15em] uppercase font-medium transition-all duration-350 hover:bg-charcoal hover:-translate-y-px hover:shadow-[0_8px_32px_rgba(42,42,42,0.15)]"
+            className="inline-block py-4 px-10 bg-sage-dark text-warm-white no-underline text-[12px] tracking-[0.15em] uppercase font-medium transition-all duration-300 hover:bg-charcoal hover:-translate-y-px hover:shadow-[0_8px_32px_rgba(42,42,42,0.15)]"
           >
             Request an Appointment
           </Link>
@@ -70,11 +70,11 @@ export default function Hero() {
       <div className="relative overflow-hidden max-lg:hidden">
         <div className="absolute inset-0 animate-fade-in animate-delay-2">
           {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-cream to-transparent z-1 [background:linear-gradient(120deg,var(--color-cream)_0%,transparent_40%)]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cream to-transparent z-[1] [background:linear-gradient(120deg,var(--color-cream)_0%,transparent_40%)]" />
           {/* Background organic shape */}
           <div className="absolute top-[8%] right-[8%] w-[82%] h-[84%] bg-gradient-to-br from-sage-light via-taupe-light to-gold-light rounded-[2px_60%_2px_40%]" />
           {/* Photo */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-[38%] -translate-y-1/2 w-[66%] aspect-[3/4] overflow-hidden z-2 shadow-[0_32px_80px_rgba(42,42,42,0.18)]">
+          <div className="absolute top-1/2 left-1/2 -translate-x-[38%] -translate-y-1/2 w-[66%] aspect-[3/4] overflow-hidden z-[2] shadow-[0_32px_80px_rgba(42,42,42,0.18)]">
             <Image
               src="/images/dr-alexander-hero.jpg"
               alt="Dr. Terri Alexander, MD — Board-Certified OB/GYN"
@@ -83,7 +83,7 @@ export default function Hero() {
               priority
               sizes="(max-width: 1024px) 0vw, 33vw"
             />
-            <div className="absolute bottom-7 left-1/2 -translate-x-1/2 bg-cream/96 py-3.5 px-6 text-center whitespace-nowrap z-3 backdrop-blur-[8px]">
+            <div className="absolute bottom-7 left-1/2 -translate-x-1/2 bg-cream/96 py-3.5 px-6 text-center whitespace-nowrap z-[3] backdrop-blur-[8px]">
               <span className="font-heading text-[18px] font-normal text-charcoal block">
                 Dr. Terri Alexander
               </span>
@@ -93,7 +93,7 @@ export default function Hero() {
             </div>
           </div>
           {/* Rotating decoration */}
-          <div className="absolute bottom-[10%] left-[5%] w-40 h-40 border border-sage/25 rounded-full z-2 animate-rotate before:content-[''] before:absolute before:inset-5 before:border before:border-sage/15 before:rounded-full" />
+          <div className="absolute bottom-[10%] left-[5%] w-40 h-40 border border-sage/25 rounded-full z-[2] animate-rotate before:content-[''] before:absolute before:inset-5 before:border before:border-sage/15 before:rounded-full" />
         </div>
       </div>
     </section>

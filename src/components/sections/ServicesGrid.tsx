@@ -30,7 +30,7 @@ export default function ServicesGrid() {
           >
             <Link
               href={`/services/${service.slug}`}
-              className="block bg-warm-white p-10 px-9 transition-all duration-300 relative overflow-hidden no-underline group hover:bg-cream before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-sage-dark before:transition-[width] before:duration-400 hover:before:w-full"
+              className="block bg-warm-white p-10 px-9 transition-all duration-300 relative overflow-hidden no-underline group hover:bg-cream before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-sage-dark before:transition-[width] before:duration-300 hover:before:w-full"
             >
               <span className="font-heading text-[13px] text-gold font-normal tracking-[0.08em] mb-4 block">
                 {service.num}

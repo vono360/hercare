@@ -20,7 +20,7 @@ export default function Testimonials() {
       <div className="grid grid-cols-3 gap-6 max-w-[1280px] mx-auto max-lg:grid-cols-1 max-lg:max-w-[600px]">
         {testimonials.map((review, i) => (
           <ScrollReveal key={i} delay={(i * 2) as 0 | 2 | 4}>
-            <div className="bg-warm-white/4 border border-warm-white/8 p-10 px-9 transition-all duration-350 relative hover:bg-warm-white/7 hover:border-gold/30 hover:-translate-y-1">
+            <div className="bg-warm-white/4 border border-warm-white/8 p-10 px-9 transition-all duration-300 relative hover:bg-warm-white/7 hover:border-gold/30 hover:-translate-y-1">
               <div className="flex gap-1 mb-6 text-gold text-[14px]">
                 {Array.from({ length: review.rating }).map((_, j) => (
                   <span key={j}>&#9733;</span>

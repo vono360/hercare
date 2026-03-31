@@ -300,7 +300,7 @@ export default function AboutPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-block py-4 px-10 bg-warm-white text-sage-dark no-underline text-[12px] tracking-[0.15em] uppercase font-medium transition-all duration-350 hover:bg-gold hover:text-warm-white hover:-translate-y-px"
+              className="inline-block py-4 px-10 bg-warm-white text-sage-dark no-underline text-[12px] tracking-[0.15em] uppercase font-medium transition-all duration-300 hover:bg-gold hover:text-warm-white hover:-translate-y-px"
             >
               Request an Appointment
             </Link>

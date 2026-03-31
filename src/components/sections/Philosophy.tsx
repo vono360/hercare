@@ -74,7 +74,7 @@ export default function Philosophy() {
         <div className="grid grid-cols-2 gap-6 mt-12 max-sm:grid-cols-1">
           {values.map((value, i) => (
             <ScrollReveal key={value.title} delay={(i + 1) as 1 | 2 | 3 | 4}>
-              <div className="p-7 bg-warm-white border border-border transition-all duration-350 hover:border-sage-light hover:-translate-y-[3px] hover:shadow-[0_12px_40px_rgba(92,114,96,0.08)]">
+              <div className="p-7 bg-warm-white border border-border transition-all duration-300 hover:border-sage-light hover:-translate-y-[3px] hover:shadow-[0_12px_40px_rgba(92,114,96,0.08)]">
                 <div className="w-9 h-9 mb-4 text-sage">{value.icon}</div>
                 <div className="font-heading text-[20px] font-normal text-charcoal mb-2">
                   {value.title}

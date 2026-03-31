@@ -1,7 +1,8 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme inline {
-  /* Colors */
+:root {
   --color-cream: #FAF7F2;
   --color-warm-white: #FDFCF9;
   --color-sage: #8A9E8B;
@@ -16,10 +17,6 @@
   --color-text-primary: #2A2A2A;
   --color-text-muted: #655B51;
   --color-border: rgba(184, 168, 152, 0.3);
-
-  /* Fonts */
-  --font-heading: var(--font-cormorant);
-  --font-body: var(--font-jost);
 }
 
 html {
@@ -27,7 +24,7 @@ html {
 }
 
 body {
-  font-family: var(--font-body), sans-serif;
+  font-family: var(--font-jost), sans-serif;
   background: var(--color-cream);
   color: var(--color-text-primary);
   font-weight: 300;
