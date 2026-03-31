@@ -7,6 +7,7 @@ export const services: Service[] = [
     slug: "perimenopause-menopause-care",
     shortDesc:
       "Personalized support through every stage of hormonal transition \u2014 hot flashes, sleep disruption, mood changes, and beyond.",
+    relatedSlugs: ["hormone-therapy", "mental-health-mood", "sexual-health"],
   },
   {
     num: "02",
@@ -14,6 +15,7 @@ export const services: Service[] = [
     slug: "hormone-therapy",
     shortDesc:
       "Individualized hormone therapy and non-hormonal options tailored to your goals, history, and safety profile.",
+    relatedSlugs: ["perimenopause-menopause-care", "cardiovascular-health", "breast-health"],
   },
   {
     num: "03",
@@ -21,6 +23,7 @@ export const services: Service[] = [
     slug: "longevity-preventive-health",
     shortDesc:
       "Proactive risk assessment, lifestyle strategies, and evidence-based screening to support healthy aging.",
+    relatedSlugs: ["cervical-cancer-screening", "breast-health", "cardiovascular-health"],
   },
   {
     num: "04",
@@ -28,6 +31,7 @@ export const services: Service[] = [
     slug: "sexual-health",
     shortDesc:
       "Compassionate, confidential care for libido, intimacy discomfort, vaginal dryness, infections, and sexual wellness.",
+    relatedSlugs: ["perimenopause-menopause-care", "hormone-therapy", "urinary-tract-pelvic-floor"],
   },
   {
     num: "05",
@@ -35,6 +39,7 @@ export const services: Service[] = [
     slug: "mental-health-mood",
     shortDesc:
       "Support for mood changes, anxiety, depression, and emotional well-being \u2014 especially during hormonal transitions.",
+    relatedSlugs: ["perimenopause-menopause-care", "hormone-therapy", "sexual-health"],
   },
   {
     num: "06",
@@ -42,6 +47,7 @@ export const services: Service[] = [
     slug: "contraception",
     shortDesc:
       "Comprehensive counseling and access to the full range of birth control options aligned with your lifestyle and goals.",
+    relatedSlugs: ["cervical-cancer-screening", "abnormal-bleeding", "mental-health-mood"],
   },
   {
     num: "07",
@@ -49,6 +55,7 @@ export const services: Service[] = [
     slug: "cervical-cancer-screening",
     shortDesc:
       "Routine Pap tests and HPV screening with guideline-based care and timely follow-up when needed.",
+    relatedSlugs: ["longevity-preventive-health", "sexual-health", "abnormal-bleeding"],
   },
   {
     num: "08",
@@ -56,6 +63,7 @@ export const services: Service[] = [
     slug: "cardiovascular-health",
     shortDesc:
       "Heart health assessment, cholesterol and blood pressure management tailored to women\u2019s changing physiology.",
+    relatedSlugs: ["perimenopause-menopause-care", "hormone-therapy", "weight-metabolic-management"],
   },
   {
     num: "09",
@@ -63,6 +71,7 @@ export const services: Service[] = [
     slug: "weight-metabolic-management",
     shortDesc:
       "Sustainable, science-backed strategies for metabolic health, insulin resistance, and long-term weight wellness.",
+    relatedSlugs: ["cardiovascular-health", "perimenopause-menopause-care", "longevity-preventive-health"],
   },
   {
     num: "10",
@@ -70,6 +79,7 @@ export const services: Service[] = [
     slug: "abnormal-bleeding",
     shortDesc:
       "Thorough evaluation of irregular, heavy, or unexpected bleeding with clear, effective treatment options.",
+    relatedSlugs: ["contraception", "cervical-cancer-screening", "hormone-therapy"],
   },
   {
     num: "11",
@@ -77,6 +87,7 @@ export const services: Service[] = [
     slug: "breast-health",
     shortDesc:
       "Clinical breast exams, imaging referrals, and evaluation focused on early detection and lifelong breast health.",
+    relatedSlugs: ["longevity-preventive-health", "hormone-therapy", "cardiovascular-health"],
   },
   {
     num: "12",
@@ -84,5 +95,16 @@ export const services: Service[] = [
     slug: "urinary-tract-pelvic-floor",
     shortDesc:
       "Assessment and treatment for urinary symptoms, incontinence, and pelvic floor concerns to improve daily comfort.",
+    relatedSlugs: ["perimenopause-menopause-care", "sexual-health", "hormone-therapy"],
   },
 ];
+
+export function getServiceBySlug(slug: string): Service | undefined {
+  return services.find((s) => s.slug === slug);
+}
+
+export function getRelatedServices(service: Service): Service[] {
+  return service.relatedSlugs
+    .map((slug) => services.find((s) => s.slug === slug))
+    .filter((s): s is Service => s !== undefined);
+}

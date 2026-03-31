@@ -3,6 +3,18 @@ export interface Service {
   name: string;
   slug: string;
   shortDesc: string;
+  relatedSlugs: string[];
+}
+
+export interface ServiceContent {
+  slug: string;
+  title: string;
+  metaDescription: string;
+  overview: string[];
+  approach: string[];
+  expectations: string[];
+  signs: string[];
+  faqs: { question: string; answer: string }[];
 }
 
 export interface Testimonial {
