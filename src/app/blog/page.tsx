@@ -60,6 +60,13 @@ export default function BlogPage() {
                   className="block py-10 border-b border-border no-underline group transition-colors hover:bg-warm-white -mx-8 px-8"
                 >
                   <div className="flex items-center gap-4 mb-4">
+                    {post.draft && (
+                      <span className="text-[10px] tracking-[0.1em] uppercase py-1 px-2.5 bg-gold/10 border border-gold/30 text-gold font-medium">
+                        Draft
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex items-center gap-4 mb-4">
                     <span className="text-[11px] tracking-[0.12em] uppercase text-gold font-medium">
                       {post.category}
                     </span>

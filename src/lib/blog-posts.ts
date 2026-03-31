@@ -7,6 +7,7 @@ export interface BlogPostMeta {
   category: string;
   tags: string[];
   readTime: string;
+  draft: boolean;
 }
 
 export interface BlogPostFull extends BlogPostMeta {
@@ -25,6 +26,7 @@ export const blogPosts: BlogPostFull[] = [
     category: "Practice News",
     tags: ["HerCare", "Naperville", "women's health", "Dr. Alexander"],
     readTime: "4 min read",
+    draft: true,
     content: [
       "After more than two decades of practicing obstetrics and gynecology, I\u2019ve had the privilege of caring for thousands of women through some of the most important moments of their lives. Along the way, I\u2019ve also seen firsthand what works in women\u2019s healthcare \u2014 and what doesn\u2019t.",
       "Too often, women tell me they feel rushed through appointments, unheard by their providers, or left without clear answers to their questions. Too often, the healthcare system treats each symptom in isolation rather than looking at the whole picture. And too often, women accept discomfort, fatigue, or mood changes as \u201cjust part of getting older\u201d when effective treatments exist.",
@@ -65,6 +67,7 @@ export const blogPosts: BlogPostFull[] = [
     category: "Menopause & Hormones",
     tags: ["perimenopause", "menopause", "hormones", "symptoms", "women over 35"],
     readTime: "6 min read",
+    draft: true,
     content: [
       "When most women think about menopause, they picture hot flashes in their 50s. But the transition actually begins much earlier \u2014 often in the early-to-mid 40s, and for some women, in their late 30s. This transitional phase is called perimenopause, and it\u2019s one of the most misunderstood stages of women\u2019s health.",
       "During perimenopause, your ovaries gradually produce less estrogen. But the decline isn\u2019t smooth or linear \u2014 hormone levels can spike and plummet unpredictably, causing a wide range of symptoms that many women don\u2019t immediately connect to hormonal changes.",
@@ -107,6 +110,7 @@ export const blogPosts: BlogPostFull[] = [
     category: "Women's Health",
     tags: ["choosing a gynecologist", "Chicago suburbs", "Naperville", "women's health"],
     readTime: "5 min read",
+    draft: true,
     content: [
       "Your gynecologist is more than a doctor you see once a year for a routine exam. She or he is a partner in your health across some of the most important transitions of your life \u2014 from contraception and fertility to perimenopause and beyond. That relationship should be built on trust, communication, and a shared commitment to your well-being.",
       "Yet many women settle for a provider who doesn\u2019t quite feel right, whether because of convenience, insurance constraints, or simply not knowing what to look for. If you\u2019re searching for a new gynecologist in the Chicago suburbs, here are the qualities and questions that matter most.",

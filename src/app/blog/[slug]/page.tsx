@@ -97,6 +97,12 @@ export default async function BlogPostPage({ params }: PageProps) {
                 </ol>
               </nav>
 
+              {post.draft && (
+                <div className="mb-6 bg-gold/10 border border-gold/30 py-3 px-5 text-[13px] text-text-muted">
+                  <strong className="text-gold font-medium">Draft</strong> &mdash; This article is pending review by Dr. Alexander before publication.
+                </div>
+              )}
+
               <div className="flex items-center gap-4 mb-6">
                 <span className="text-[11px] tracking-[0.12em] uppercase text-gold font-medium">
                   {post.category}
